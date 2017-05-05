@@ -1,0 +1,171 @@
+<header>
+	<div class="row column custom-top-bar">
+		<div class="row">
+			<div class="columns large-1" id="img-logo"></div>
+			<div class="medium-9 large-14 large-text-center columns ">
+				<blockquote>
+					Kalah Game
+					<footer class="columns">— BackBase coding challenge</footer>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="off-canvas-wrapper">
+	<div class="off-canvas-wrapper-inner">
+		<div class="off-canvas-content" data-off-canvas-content>
+			<div class="row">
+				<form>
+					<div>
+						<section>
+							<div class="row">
+								<div class="row">
+									<div class="column large-7 large-centered">
+										<label>Player 3 <input type="text"
+											[disabled]="gameInitiated" [(ngModel)]="namePlayer1"
+											name="namePlayer1">
+										</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="column large-7 large-centered">
+										<label>Player 2 <input type="text"
+											[disabled]="gameInitiated" [(ngModel)]="namePlayer2"
+											name="namePlayer2">
+										</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="column large-7 large-centered">
+										<button class="button" id="btn-entrar"
+											[disabled]="gameInitiated" (click)="play()">Play</button>
+									</div>
+								</div>
+
+							</div>
+
+						</section>
+					</div>
+				</form>
+
+			</div>
+
+			<div class="row">
+				<div class="column large-2 large-centered" id="currentPlayerMsg">
+					<span>{{currentPlayerName + gameStatus}}</span>
+				</div>
+			</div>
+			<div class="row large-12" id="gameboard">
+
+				<div class="column kalah">
+					Kalah
+					<div class="stones">
+						<span>{{serverStatus.boardPlayer2.kalah}}</span>
+					</div>
+				</div>
+				<div class="column large-8 board-players">
+					<div class="row">
+						<button class="column large-1 pit button"
+							[disabled]="boardP2Disabled || (serverStatus.boardPlayer2.pit6===0)" (click)="emptyPit(6)">
+							6
+							<div class="stones">
+								<span>{{serverStatus.boardPlayer2.pit6}}</span>
+							</div>
+						</button>
+						<button class="column large-1 pit button"
+							[disabled]="boardP2Disabled || (serverStatus.boardPlayer2.pit5===0)" (click)="emptyPit(5)">
+							5
+							<div class="stones">
+								<span>{{serverStatus.boardPlayer2.pit5}}</span>
+							</div>
+						</button>
+						<button class="column large-1 pit button"
+							[disabled]="boardP2Disabled || (serverStatus.boardPlayer2.pit4===0)" (click)="emptyPit(4)">
+							4
+							<div class="stones">
+								<span>{{serverStatus.boardPlayer2.pit4}}</span>
+							</div>
+						</button>
+						<button class="column large-1 pit button"
+							[disabled]="boardP2Disabled || (serverStatus.boardPlayer2.pit3===0)" (click)="emptyPit(3)">
+							3
+							<div class="stones">
+								<span>{{serverStatus.boardPlayer2.pit3}}</span>
+							</div>
+						</button>
+						<button class="column large-1 pit button"
+							[disabled]="boardP2Disabled || (serverStatus.boardPlayer2.pit2===0)" (click)="emptyPit(2)">
+							2
+							<div class="stones">
+								<span>{{serverStatus.boardPlayer2.pit2}}</span>
+							</div>
+						</button>
+						<button class="column large-1  pit  button end"
+							[disabled]="boardP2Disabled || (serverStatus.boardPlayer2.pit1===0)" (click)="emptyPit(1)">
+							1
+							<div class="stones">
+								<span>{{serverStatus.boardPlayer2.pit1}}</span>
+							</div>
+						</button>
+					</div>
+					<div class="row">
+						<button class="column large-1  pit button"
+							[disabled]="boardP1Disabled || (serverStatus.boardPlayer1.pit1===0)" (click)="emptyPit(1)">
+							1
+							<div class="stones">
+								<span>{{serverStatus.boardPlayer1.pit1}}</span>
+							</div>
+						</button>
+						<button class="column large-1  pit button"
+							[disabled]="boardP1Disabled || (serverStatus.boardPlayer1.pit2===0)" (click)="emptyPit(2)">
+							2
+							<div class="stones">
+								<span>{{serverStatus.boardPlayer1.pit2}}</span>
+							</div>
+						</button>
+						<button class="column large-1  pit button"
+							[disabled]="boardP1Disabled || (serverStatus.boardPlayer1.pit3===0)" (click)="emptyPit(3)">
+							3
+							<div class="stones">
+								<span>{{serverStatus.boardPlayer1.pit3}}</span>
+							</div>
+						</button>
+						<button class="column large-1  pit button"
+							[disabled]="boardP1Disabled || (serverStatus.boardPlayer1.pit4===0)" (click)="emptyPit(4)">
+							4
+							<div class="stones">
+								<span>{{serverStatus.boardPlayer1.pit4}}</span>
+							</div>
+						</button>
+						<button class="column large-1  pit button"
+							[disabled]="boardP1Disabled || (serverStatus.boardPlayer1.pit5===0)" (click)="emptyPit(5)">
+							5
+							<div class="stones">
+								<span>{{serverStatus.boardPlayer1.pit5}}</span>
+							</div>
+						</button>
+						<button class="column large-1 end  pit button"
+							[disabled]="boardP1Disabled || (serverStatus.boardPlayer1.pit6===0)" (click)="emptyPit(6)">
+							6
+							<div class="stones">
+								<span>{{serverStatus.boardPlayer1.pit6}}</span>
+							</div>
+						</button>
+					</div>
+
+				</div>
+
+				<div class="column kalah end">
+					Kalah
+					<div class="stones">
+						<span>{{serverStatus.boardPlayer1.kalah}}</span>
+					</div>
+				</div>
+
+			</div>
+
+
+
+		</div>
+	</div>
+</div>
