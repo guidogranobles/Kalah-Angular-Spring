@@ -1,4 +1,4 @@
-package com.backbase.coding.challenge.dao;
+package co.com.kalah.game.dao;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
-import com.backbase.coding.challenge.entities.GameBoard;
+import co.com.kalah.game.entities.GameBoard;
 
 public interface GameBoardRepository extends CrudRepository<GameBoard, Integer> {
 

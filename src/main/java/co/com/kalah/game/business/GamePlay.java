@@ -1,4 +1,4 @@
-package com.backbase.coding.challenge.business;
+package co.com.kalah.game.business;
 
 import java.util.List;
 
@@ -7,12 +7,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import com.backbase.coding.challenge.dao.GameBoardRepository;
-import com.backbase.coding.challenge.dao.PlayerRepository;
-import com.backbase.coding.challenge.dto.GamePlayStatus;
-import com.backbase.coding.challenge.dto.GamePlayUpdate;
-import com.backbase.coding.challenge.entities.GameBoard;
-import com.backbase.coding.challenge.entities.Player;
+import co.com.kalah.game.dao.GameBoardRepository;
+import co.com.kalah.game.dao.PlayerRepository;
+import co.com.kalah.game.dto.GamePlayStatus;
+import co.com.kalah.game.dto.GamePlayUpdate;
+import co.com.kalah.game.entities.GameBoard;
+import co.com.kalah.game.entities.Player;
 
 /**
  * ****************************************************************.

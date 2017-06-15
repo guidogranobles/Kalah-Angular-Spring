@@ -1,4 +1,4 @@
-package com.backbase.coding.challenge.services;
+package co.com.kalah.game.services;
 
 import java.util.ArrayList;
 
@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.backbase.coding.challenge.business.GamePlay;
-import com.backbase.coding.challenge.dto.GamePlayStatus;
-import com.backbase.coding.challenge.dto.GamePlayUpdate;
-import com.backbase.coding.challenge.entities.Player;
+import co.com.kalah.game.business.GamePlay;
+import co.com.kalah.game.dto.GamePlayStatus;
+import co.com.kalah.game.dto.GamePlayUpdate;
+import co.com.kalah.game.entities.Player;
 
 @RestController
 @RequestMapping("/kalahgame/rest/kalah")

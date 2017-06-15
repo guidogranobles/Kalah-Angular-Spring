@@ -1,8 +1,8 @@
-package com.backbase.coding.challenge.dao;
+package co.com.kalah.game.dao;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.backbase.coding.challenge.entities.Player;
+import co.com.kalah.game.entities.Player;
 
 public interface PlayerRepository extends CrudRepository<Player, Long> {
 

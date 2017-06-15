@@ -1,9 +1,10 @@
-package com.backbase.kalah;
-
+package co.com.kalah.game.kalah;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
@@ -11,9 +12,15 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan(basePackages={"com.backbase.coding.challenge.services",  "com.backbase.coding.challenge.business"})
 @EnableJpaRepositories("com.backbase.coding.challenge.dao") 
 @EntityScan("com.backbase.coding.challenge.entities")
-public class Application {
+public class KalahGameWebApplication extends SpringBootServletInitializer {
 
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(KalahGameWebApplication.class);
+	}
+
+	public static void main(String[] args) throws Exception {
+		SpringApplication.run(KalahGameWebApplication.class, args);
+	}
+
 }
